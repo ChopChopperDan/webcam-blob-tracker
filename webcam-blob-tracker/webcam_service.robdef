@@ -1,0 +1,17 @@
+service edu.rpi.cats.sensors.webcam
+import edu.rpi.cats.sensors.camera_interface
+
+option version 0.5
+
+object Webcam
+    implements edu.rpi.cats.sensors.camera_interface.Camera
+
+    function edu.rpi.cats.sensors.camera_interface.Image getCurrentImage()
+    
+    function edu.rpi.cats.sensors.camera_interface.ImageHeader getImageHeader()
+    
+    function void StartStreaming()
+    function void StopStreaming()
+    
+    pipe edu.rpi.cats.sensors.camera_interface.Image ImageStream
+end object
